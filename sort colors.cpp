@@ -1,10 +1,11 @@
 class Solution {
-public:
-
-    void sortColors(vector<int>& a) {                           //Time Complexity : O(n)
+public:                                             //sorry i mistakenly put 29 nov date on google form but i 
+                                                    //    had submitted it on 1 dec
+void sortColors(vector<int>& a) {                           
+                                                                //Time Complexity : O(n)
                                                                 //Space Complexity : O(1)
         int i,j,k,c=0,n=a.size();
-        i=j=0;
+        i=j=0;          
         k=n-1;
         while(j<=k)
         {

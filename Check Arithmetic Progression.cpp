@@ -1,4 +1,4 @@
-
+//in c++
 class Solution{
     public:
     bool checkIsAP(int arr[], int n)
@@ -22,3 +22,23 @@ class Solution{
     }
 
 };
+
+
+//in Java
+
+class Solution {
+    public boolean canMakeArithmeticProgression(int[] a) {
+        int i,j,k,c=0,d=0;
+        Arrays.sort(a);
+        
+        d=a[1]-a[0];
+        
+        for(i=1;i<a.length-1;i++)
+        {
+            if(a[i+1]-a[i]!=d)
+            return false;
+        }
+        return true;
+        
+    }
+}

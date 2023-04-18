@@ -1,0 +1,33 @@
+
+
+class Solution
+{
+    public:
+    //Function to find the next greater element for each element of the array.
+    vector<long long> nextLargerElement(vector<long long> a, int n){
+        stack<long long> st;
+       
+        int i,j;
+        vector<long long> v(n);
+
+        for(i=n-1;i>=0;i--)
+        {
+            
+            while(!st.empty() && st.top()<=a[i])
+            {
+                st.pop();
+            }
+
+            if(st.empty()){
+            v[i]=-1;
+            
+            }
+            else
+            v[i]=st.top();
+
+            st.push(a[i]);
+        }
+        return v;
+    }
+};
+
